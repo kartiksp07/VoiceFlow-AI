@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VoiceFlow AI</title>
+    <meta name="description" content="VoiceFlow AI is a responsive dashboard for creating, configuring and monitoring AI voice agents: live call analytics, call history with transcripts, and agent management. A frontend-only React demo." />
+    <meta name="theme-color" content="#0f857b" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="VoiceFlow AI" />
+    <meta property="og:title" content="VoiceFlow AI — Voice Agent Dashboard" />
+    <meta property="og:description" content="Create, configure and monitor AI voice agents. Call analytics, searchable call history with transcripts, and agent management in a responsive React dashboard." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="VoiceFlow AI — Voice Agent Dashboard" />
+    <meta name="twitter:description" content="Create, configure and monitor AI voice agents. A frontend-only React + Tailwind demo." />
+    <script>
+      // Apply the saved theme before first paint to avoid a light-mode flash.
+      try {
+        var t = (JSON.parse(localStorage.getItem('voiceflow:settings')) || {}).theme
+        if (t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark')
+      } catch (e) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
